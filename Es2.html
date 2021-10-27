@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>JS ES2</title>
+</head>
+    <body>
+    <h1>JS ES2</h1>
+    <h2>Static HTML page: excercise 1 but with JQuerry</h2>
+
+    <div id="div1"></div>
+  
+    <script src = https://code.jquery.com/jquery-3.6.0.min.js ></script>
+    <script>
+     document.getElementById("div1").innerHTML="ciao";
+      //idenitifico un oggetto $("nomeID").method...
+     $("#div1").html("non premere il bottone!");
+     var colore =0;
+     $("body").append($('<button id="btn1">CLICCAMI</button>').click(function(){
+        
+    
+    if(colore%2==0){
+      $("#div1").attr("style", "background-color: red");
+      $("#div1").html("TI AVEVO DETTO DI NON PREMERE MONA!");
+      
+    }else{
+
+        $("#div1").attr("style", "background-color: ");
+        $("#div1").html("non premere il bottone!");
+       
+    }
+     
+colore++;
+      
+     }));
+     /*   var colore =0;
+      $("#btn1").click(function(){
+    if(colore%2==0){
+      $("#div1").attr("style", "background-color: red");
+      $("#div1").html("TI AVEVO DETTO DI NON PREMERE MONA!");
+    }else{
+        $("#div1").attr("style", "background-color: ");
+        $("#div1").html("non premere il bottone!");
+    }
+        colore++;
+     
+      }); */
+
+      var h3 = $("<h3>Aggiunto un titolo H3</h3>");
+      $("body").append(h3);
+      //lo posso scrivere anche in sun solo passaggio
+      $("body").append($("<h4>Aggiunto un titolo H4</h4>"));
+      
+    </script>
+    
+    </body>
+</html>
